@@ -160,6 +160,10 @@ export class ChartApi implements IChartApi, DataUpdatesConsumer<SeriesType> {
 		this._timeScaleApi = new TimeScaleApi(model, this._chartWidget.timeAxisWidget());
 	}
 
+	public moveCrosshair(x: number, y: number, visible: boolean): void{
+    this._chartWidget.paneWidgets()[0].setCrossHair(x,y,visible);
+	}
+
 	public remove(): void {
 		this._chartWidget.clicked().unsubscribeAll(this);
 		this._chartWidget.dblClicked().unsubscribeAll(this);

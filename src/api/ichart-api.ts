@@ -280,6 +280,9 @@ export interface IChartApi {
 	 * chart.unsubscribeCrosshairMove(myCrosshairMoveHandler);
 	 * ```
 	 */
+
+	moveCrosshair(x: number, y: number, visible: boolean): void;
+
 	unsubscribeCrosshairMove(handler: MouseEventHandler): void;
 
 	/**
